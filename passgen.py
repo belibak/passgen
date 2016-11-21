@@ -5,12 +5,14 @@ import argparse
 
 argparser = argparse.ArgumentParser(usage='./passgen -l 16')
 argparser.add_argument('-l', type=int, help='length', default=16)
+argparser.add_argument('-c', type=int, help='passwords count', default=1)
 argparser.add_argument('-d', type=int, help='difficulty', default='3')
 args = argparser.parse_args()
 args = args.__dict__
 
 length = args['l']
 df = args['d']
+passcnt = args['c']
 
 letters = string.ascii_letters
 digits = '0123456789'
@@ -34,5 +36,6 @@ def gen(length):
     print(passwd)
 
 if __name__ == '__main__':
-    gen(length)
+    for i in range(0, passcnt):
+        gen(length)
     
