@@ -14,7 +14,7 @@ df = args['d']
 
 letters = string.ascii_letters
 digits = '0123456789'
-symbols = string.punctuation
+#symbols = string.punctuation
 symbols = '#$%&()*+<=>?@'
 
 if df == 1:
