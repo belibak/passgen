@@ -1,5 +1,5 @@
 ```
-passgen -c 10 -d 3 -l 10
+./passgen.py -c 10 -d 3 -l 10
 
 ```
 * -c generated passwords count (default: 1)
